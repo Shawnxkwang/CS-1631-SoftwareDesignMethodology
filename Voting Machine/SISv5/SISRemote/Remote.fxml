@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="546.0" prefWidth="897.0" type="GridPane" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="NEVER" maxWidth="463.0" minWidth="-Infinity" prefWidth="306.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="739.0" minWidth="10.0" prefWidth="597.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Accordion>
+        <panes>
+          <TitledPane text="Connection &amp; Scope">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane alignment="CENTER" maxWidth="-Infinity" prefHeight="234.0" prefWidth="306.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Server IP" GridPane.halignment="LEFT">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="sIP" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Label text="Server Port" GridPane.halignment="LEFT" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Refresh Rate" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="sPort" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="rRate" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Button fx:id="reset" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handlerReset" text="Reset" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Label text="Scope" GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="scope" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <ToggleButton fx:id="connect" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handlerConnect" text="Connect" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </ToggleButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane fx:id="messagesTitle" expanded="false" text="Message(s)">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="-1.0" layoutY="1.0" maxWidth="-Infinity" prefWidth="306.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints fillHeight="false" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="272.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <ListView fx:id="messages" onMouseEntered="#handlerMessagesHint" onMouseExited="#handlerMessagesHintExit" prefWidth="200.0" GridPane.columnSpan="3" />
+                              <Button fx:id="send" disable="true" mnemonicParsing="false" onMouseClicked="#handlerSend" text="Send" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Button fx:id="load" mnemonicParsing="false" onMouseClicked="#handlerLoad" text="Load" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                              <Button fx:id="clear" mnemonicParsing="false" onMouseClicked="#handlerClear" text="Clear" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <GridPane GridPane.columnIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="503.0" minHeight="10.0" percentHeight="50.0" prefHeight="346.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="356.0" minHeight="10.0" percentHeight="50.0" prefHeight="343.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TitledPane fx:id="toSendTitle" alignment="TOP_LEFT" collapsible="false" maxHeight="1.7976931348623157E308" onMouseClicked="#handlerToSendSave" prefWidth="580.0" text="Message To Send (Click Me To Save)">
+               <content>
+                  <TableView fx:id="toSend" maxHeight="1.7976931348623157E308" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="toSendKey" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="270.0" text="Key" />
+                      <TableColumn fx:id="toSendValue" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="315.0" text="Value" />
+                    </columns>
+                  </TableView>
+               </content>
+            </TitledPane>
+            <TitledPane fx:id="receivedTitle" alignment="TOP_LEFT" collapsible="false" maxHeight="1.7976931348623157E308" onMouseClicked="#handlerReceivedSave" prefWidth="582.0" text="Message Received (Click Me To Save)" GridPane.rowIndex="1">
+               <content>
+                  <TableView fx:id="received" maxHeight="1.7976931348623157E308" prefWidth="200.0">
+                    <columns>
+                      <TableColumn fx:id="receivedKey" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="270.0" text="Key" />
+                      <TableColumn fx:id="receivedValue" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="315.0" text="Value" />
+                    </columns>
+                  </TableView>
+               </content>
+            </TitledPane>
+         </children>
+      </GridPane>
+   </children>
+</fx:root>

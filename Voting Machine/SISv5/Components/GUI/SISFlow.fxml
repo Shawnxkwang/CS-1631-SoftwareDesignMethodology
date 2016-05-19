@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="782.0" type="javafx.scene.layout.GridPane" vgap="5.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="-Infinity" valignment="BOTTOM" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <GridPane hgap="5.0" vgap="5.0" GridPane.rowIndex="1">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="687.0" minWidth="10.0" percentWidth="43.0" prefWidth="622.0" />
+            <ColumnConstraints maxWidth="135.0" minWidth="70.0" percentWidth="19.0" prefWidth="135.0" />
+            <ColumnConstraints maxWidth="135.0" minWidth="70.0" percentWidth="25.0" prefWidth="135.0" />
+            <ColumnConstraints maxWidth="135.0" minWidth="70.0" percentWidth="13.0" prefWidth="135.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="email" />
+            <Button fx:id="change" mnemonicParsing="false" onMouseClicked="#handlerChange" text="Change Recepients" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <TextField fx:id="userID" GridPane.columnIndex="2" />
+            <Button fx:id="switcha" mnemonicParsing="false" onMouseClicked="#handlerSwitch" text="Switch User" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </GridPane>
+      <ScrollPane fx:id="scroll" fitToHeight="true" fitToWidth="true">
+         <content>
+            <FlowPane fx:id="flow" cache="true" cacheHint="SPEED" hgap="5.0" vgap="5.0" />
+         </content>
+      </ScrollPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</fx:root>

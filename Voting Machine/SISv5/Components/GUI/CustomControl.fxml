@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root cache="true" cacheHint="SPEED" prefHeight="194.0" prefWidth="470.0" type="javafx.scene.layout.VBox" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TitledPane fx:id="title" animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#handlerAlertResolved" prefHeight="232.0" prefWidth="550.0" text="untitled">
+         <content>
+            <GridPane hgap="10.0" prefWidth="548.0" vgap="10.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="139.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="137.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="2.0" prefWidth="80.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="144.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextArea fx:id="console" prefHeight="200.0" prefWidth="192.0" GridPane.columnSpan="2" GridPane.rowSpan="4" />
+                  <Label text="Max" GridPane.columnIndex="2" />
+                  <Label text="Min" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="Start Date" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label text="End Date" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label text="Refresh" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <TextField fx:id="max" disable="false" GridPane.columnIndex="3" />
+                  <TextField fx:id="min" disable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="refreshRate" disable="false" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <DatePicker fx:id="startDate" disable="false" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="endDate" disable="false" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <BorderPane GridPane.rowIndex="4">
+                     <center>
+                        <Button fx:id="kill" mnemonicParsing="false" onMouseClicked="#handlerKill" prefWidth="100.0" text="Kill" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <center>
+                        <ToggleButton fx:id="active" mnemonicParsing="false" onMouseClicked="#handlerActiveInactive" prefWidth="100.0" text="Inactive" textFill="RED" />
+                     </center>
+                  </BorderPane>
+               </children>
+            </GridPane>
+         </content>
+      </TitledPane>
+   </children>
+</fx:root>
